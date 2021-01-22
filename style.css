@@ -1,0 +1,222 @@
+
+
+
+
+body{
+    
+
+    margin: 0;
+    
+    overflow: hidden;
+    animation: day_night 20s infinite;
+    
+    
+}
+
+.bg{
+    background-image: url(image_1.jpg);
+    background-repeat: no-repeat;  
+    background-size: cover;
+    background-position:100% bottom;
+    height: 100vh;
+    width: 100vw ;
+
+}
+
+.snow{
+    /* background-color: blue; */
+    position: absolute;
+    width: 100%;
+    height:95%;
+}
+
+.snow .flake{
+    position: absolute;
+    top:-5%;
+    width: 20px;
+    height: 20px;
+    /* background-color: white; */
+    border-radius:100%;
+    background-image: radial-gradient(white, transparent);
+
+    
+}
+.snow_small .flake{
+    position: absolute;
+    top:-50%;
+    width: 10px;
+    height: 10px;
+    /* background-color: white; */
+    border-radius:100%;
+    background-image: radial-gradient(white, transparent);}
+
+.snow .flake:nth-child(3n){
+    animation: flake-anim 20s infinite linear;
+}
+.snow .flake:nth-child(2n){
+    animation: flake-anim_2 20s infinite linear;
+}
+
+.snow_small .flake:nth-child(3n){
+    animation: flake-anim 20s infinite linear;
+}
+.snow_small .flake:nth-child(2n){
+    animation: flake-anim_2 20s infinite linear;
+}
+
+
+.snow .flake:nth-child(1){
+    animation-delay: 1s;
+    animation: flake-anim 20s infinite linear;
+}
+.snow .flake:nth-child(2){
+    left:83%;
+    animation-delay: 5s;
+}
+.snow .flake:nth-child(3){
+    left:56%;
+    animation-delay: 6.4s;
+}
+.snow .flake:nth-child(4){
+    left:20%;
+    animation-delay: 0.2s;
+}
+.snow .flake:nth-child(5){
+    left:89%;
+    animation-delay: 7.5s;
+
+}
+.snow .flake:nth-child(6){
+    left:38%;
+    animation-delay: 3.9s;
+}
+.snow .flake:nth-child(7){
+    left:69%;
+    animation-delay: 7s;
+}
+.snow .flake:nth-child(8){
+    left:23%;
+    animation-delay: 15s;
+}.snow .flake:nth-child(9){
+    left:67%;
+    animation-delay: 2s;
+}
+.snow .flake:nth-child(10){
+    left:93%;
+    animation-delay: 10s;
+}
+
+
+
+.snow_small .flake:nth-child(1){
+    animation-delay: 9.4s;
+    animation: flake-anim 20s infinite linear;
+}
+.snow_small .flake:nth-child(2){
+    left:4%;
+    animation-delay: 11s;
+}
+.snow_small .flake:nth-child(3){
+    left:79%;
+    animation-delay: 13.6s;
+}
+.snow_small .flake:nth-child(4){
+    left:56%;
+    animation-delay: 13.2s;
+}
+.snow_small .flake:nth-child(5){
+    left:18%;
+    animation-delay: 2.5s;
+
+}
+.snow_small .flake:nth-child(6){
+    left:92%;
+    animation-delay: 10s;
+}
+.snow_small .flake:nth-child(7){
+    left:42%;
+    animation-delay: 4.5s;
+}
+.snow_small .flake:nth-child(8){
+    left:18%;
+    animation-delay: 3s;
+}.snow_small .flake:nth-child(9){
+    left:61%;
+    animation-delay: 2s;
+}
+.snow_small .flake:nth-child(10){
+    left:19%;
+    animation-delay: 14.5s;
+}
+
+@keyframes flake-anim{
+    from{top:0%;
+        opacity:1;
+
+    }
+
+    60%{
+        top:100%;
+        opacity:1 ;
+
+    }
+
+    to{
+        top:100%;
+        opacity: 0;
+
+    }
+
+}
+
+
+@keyframes flake-anim_2{
+    from{top:0%;
+        opacity:1;
+
+    }
+
+    60%{
+        top:100%;
+        opacity:1 ;
+
+    }
+
+    to{
+        top:100%;
+        opacity: 0;
+
+    }
+
+}
+
+@keyframes day_night{
+    0%{
+        filter:grayscale(0%) brightness(100%)
+    }
+
+    50% {filter:grayscale(70%) brightness(10%)}
+
+    100%{filter:grayscale(0%) brightness(100%)}
+}
+
+.light{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border-radius: 100%;
+    top: 49%;
+    left: 37.5%;
+
+    mix-blend-mode:soft-light;
+    animation: light 2s infinite;
+}
+
+@keyframes light{
+from{opacity: 0.1;}
+20%{opacity: 0.4;}
+21%{opacity: 0.1;}
+50%{opacity: 0.0;}
+70%{opacity: 0.1;}
+to{opacity: 0.0;}}
